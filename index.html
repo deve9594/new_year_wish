@@ -10,13 +10,20 @@
   <div class="container">
     <h1>Happy New Year, My Love! 💖</h1>
     <p class="subtext">Wishing you a year full of joy, love, and success.</p>
-    <button onclick="alert('I Love You! 🥰')">Click Me!</button>
+    <button onclick="playVideo()">Click Me!</button>
   </div>
   <div class="decorative-image image1"></div>
   <div class="decorative-image image2"></div>
-  <video controls autoplay loop>
+  <video id="myVideo" controls autoplay loop style="display: none;">
     <source src="fav_aud.mp4" type="video/mp4">
     <!-- Your browser does not support the video tag. -->
 </video>
+<script>
+  // JavaScript function to execute on click
+  function playVideo() {
+            var video = document.getElementById("myVideo");
+            video.play();  // Play the video
+  }
+</script>
 </body>
 </html>
